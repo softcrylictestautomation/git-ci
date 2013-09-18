@@ -12,7 +12,7 @@ import Actions.GmailActions;
 @Test
 public class GmailTest extends BaseTest {
 
-	@Test(groups = { "GIT_CI_Test" }, testName = "GoogleTest")
+	@Test(groups = { "GIT_CI_Tests" }, testName = "GoogleTest")
 	public void GoogleTest() throws Exception {
 		sup.setTestName("GoogleTest");
 		sup.setRecordVideo(true);
@@ -31,7 +31,7 @@ public class GmailTest extends BaseTest {
 			sb.append(e.getMessage());
 			ExceptionWriter.LogException(e);
 		}
-		logger.close(logger.gettestCase(), "ParallalRun");
+		logger.close(logger.gettestCase(), "GIT_CI_Test");
 		if (sb != null)
 			Assert.assertEquals(sb.toString(), "");
 	}
