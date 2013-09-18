@@ -12,7 +12,7 @@ import Actions.GmailActions;
 @Test
 public class GmailTest extends BaseTest {
 
-	@Test(groups = { "ParallalRun" }, testName = "GoogleTest")
+	@Test(groups = { "GIT_CI_Test" }, testName = "GoogleTest")
 	public void GoogleTest() throws Exception {
 		sup.setTestName("GoogleTest");
 		sup.setRecordVideo(true);
