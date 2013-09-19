@@ -3,10 +3,10 @@
 <suite name="Suite" parallel="none">
   <test name="Test" preserve-order="true">
     <classes>
-      <class name="com.Softcrylic.automation.training.ass"/>
-      <class name="com.Softcrylic.automation.training.Google"/>
-      <class name="com.Softcrylic.automation.training.yahoo"/>
-      <class name=".assertion"/>
+      <class name="GmailTest"/>
+<!--       <class name="com.Softcrylic.automation.training.Google"/> -->
+<!--       <class name="com.Softcrylic.automation.training.yahoo"/> -->
+<!--       <class name=".assertion"/> -->
     </classes>
   </test>
 </suite>
