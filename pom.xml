@@ -7,7 +7,7 @@
   	<dependency>
   		<groupId>org.seleniumhq.selenium</groupId>
   		<artifactId>selenium-java</artifactId>
-  		<version>2.25.0</version>
+  		<version>2.32.0</version>
   		<type>jar</type>
   		<scope>compile</scope>
   	</dependency>
@@ -17,6 +17,44 @@
   		<version>6.3</version>
   		<type>jar</type>
   		<scope>compile</scope>
-  	</dependency>
+  	</dependency> 
+
+<dependency>
+			<groupId>softcrylic</groupId>
+			<artifactId>softcrylic-library</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/Softcrylic-Library-1.0.0_obs.jar</systemPath>
+		</dependency>   
+
+<dependency>
+			<groupId>waat</groupId>
+			<artifactId>WAAT</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/WAAT_v1.3.jar</systemPath>
+		</dependency>   
   </dependencies>
+<build>
+<!-- <sourceDirectory>src/Actions</sourceDirectory>
+    
+    <testSourceDirectory>src/Transections</testSourceDirectory> -->
+	 <plugins>
+
+ <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-jar-plugin</artifactId>
+		<version>2.4</version>
+		
+	 </plugin>
+  
+</plugins>
+  </build>
+<repositories>
+		<repository>
+			<id>softcryliclib</id>
+			<name>softcryliclibrary</name>
+			<url>file://${project.basedir}/lib</url>
+		</repository>
+</repositories>
 </project>

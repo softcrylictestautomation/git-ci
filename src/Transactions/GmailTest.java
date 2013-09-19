@@ -1,4 +1,4 @@
-package Transections;
+package Transactions;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
