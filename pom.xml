@@ -36,20 +36,11 @@
 		</dependency>   
   </dependencies>
 <build>
- <sourceDirectory>src/Actions</sourceDirectory> 
+<!-- <sourceDirectory>src/Actions</sourceDirectory>
     
-      <testSourceDirectory>src/Transactions</testSourceDirectory> 
-       
+    <testSourceDirectory>src/Transections</testSourceDirectory> -->
 	 <plugins>
- <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>2.0.2</version>
-    <configuration>
-      <source>1.5</source>
-      <target>1.5</target>
-    </configuration>
-  </plugin>
+
  <plugin>
 		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-jar-plugin</artifactId>
