@@ -21,7 +21,7 @@
 
 <dependency>
 			<groupId>softcrylic</groupId>
-			<artifactId>softcrylic-library</artifactId>
+			<artifactId>softcrylic-libray</artifactId>
 			<version>1.0.0</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/Softcrylic-Library-1.0.0_obs.jar</systemPath>
@@ -36,11 +36,20 @@
 		</dependency>   
   </dependencies>
 <build>
-<!-- <sourceDirectory>src/Actions</sourceDirectory>
+ <sourceDirectory>src/Actions</sourceDirectory> 
     
-    <testSourceDirectory>src/Transections</testSourceDirectory> -->
+      <testSourceDirectory>src/Transactions</testSourceDirectory> 
+       
 	 <plugins>
-
+ <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>2.0.2</version>
+    <configuration>
+      <source>1.5</source>
+      <target>1.5</target>
+    </configuration>
+  </plugin>
  <plugin>
 		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-jar-plugin</artifactId>
