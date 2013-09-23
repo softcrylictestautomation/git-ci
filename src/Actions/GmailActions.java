@@ -16,15 +16,15 @@ public class GmailActions {
 	public WebDriver doGmailTest() throws Exception {
 		try {
 			driver.get("http://www.google.com");
-			logger.createTestStepWithImage("Navigate to Google.com Home page",
+			logger.createTestStepWithImage("Navigate to Google Home page",
 					"Google.com should be opened", "Google.com is opened", true);
 		} catch (Exception e) {
 			sb.append(e.getMessage());
-			logger.createTestStepWithImage("Go to Google.com",
+			logger.createTestStepWithImage("Go to Google",
 					"Google.com should be opened", "Google.com is not opened",
 					false);
 			return driver;
-		}
+		} 
 		try {
 			// Look for search textbox and enter search term there
 			WebElement searchBox = driver.findElement(By.name("q"));
