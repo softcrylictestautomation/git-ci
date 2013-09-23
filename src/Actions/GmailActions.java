@@ -28,7 +28,7 @@ public class GmailActions {
 		try {
 			// Look for search textbox and enter search term there
 			WebElement searchBox = driver.findElement(By.name("q"));
-			searchBox.sendKeys("Selenium Webdriver API");
+			searchBox.sendKeys("Selenium API");
 			logger.createTestStepWithImage("Type in WebDriver API", "Sucess",
 					"Sucess", true);
 		} catch (Exception e) {
