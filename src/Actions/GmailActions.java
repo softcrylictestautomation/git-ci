@@ -16,7 +16,7 @@ public class GmailActions {
 	public WebDriver doGmailTest() throws Exception {
 		try {
 			driver.get("http://www.google.com");
-			logger.createTestStepWithImage("Navigate to Google Home page",
+			logger.createTestStepWithImage("Navigate to Google.com Home page",
 					"Google.com should be opened", "Google.com is opened", true);
 		} catch (Exception e) {
 			sb.append(e.getMessage());
