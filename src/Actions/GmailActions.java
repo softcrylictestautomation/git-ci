@@ -29,10 +29,10 @@ public class GmailActions {
 			// Look for search textbox and enter search term there
 			WebElement searchBox = driver.findElement(By.name("q"));
 			searchBox.sendKeys("AAPL");
-			logger.createTestStepWithImage("Type in WebDriver API", "Sucess",
+			logger.createTestStepWithImage("Type in AAPL", "Sucess",
 					"Sucess", true);
 		} catch (Exception e) {
-			logger.createTestStepWithImage("Type in WebDriver API", "Sucess",
+			logger.createTestStepWithImage("Type in AAPL", "Sucess",
 					"failed", false);
 			sb.append(e.getMessage());
 		}
