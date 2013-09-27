@@ -1,12 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="none">
-  <test name="Test" preserve-order="true">
-    <classes>
-      <class name="GmailTest"/>
-<!--       <class name="com.Softcrylic.automation.training.Google"/> -->
-<!--       <class name="com.Softcrylic.automation.training.yahoo"/> -->
-<!--       <class name=".assertion"/> -->
-    </classes>
-  </test>
+
+
+<suite parallel="tests" name="Suite">
+ <parameter name="requestId" value="888" />
+ <parameter name="reportPath" value="D:\Reports" />
+ <parameter name="Environment"  value="http://skhana:3f4602cb-8879-4260-aef7-f86d8a1c671b@ondemand.saucelabs.com:80/wd/hub" />
+ <parameter name="ApplicationToTest" value="PROD" />
+ <parameter name="ExecutionType" value="parallel" />
+
+	
+	 <test name="GoogleFinanceTest" preserve-order="true">
+		<parameter name="browser" value="FIREFOX" />
+		<parameter name="browserVersion" value="21" />
+		<parameter name="os" value="Windows 7" />
+		<parameter name="dataSource" value="NULL" />
+		<parameter name="GUID" value="NULL" />
+		<classes>
+			<class name="Test.GoogleTest">
+				<methods>
+					<include name="GoogleFinanceTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+
 </suite>
