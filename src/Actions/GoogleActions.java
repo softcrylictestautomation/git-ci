@@ -73,16 +73,17 @@ public class GoogleActions extends BaseActions {
 				JustLogger.logInfo("Step  " + StepNo + " started!");
 				
 				WebElement searchBox = GoogleHome.searchTxtBox(driver);
+				searchBox.clear();
 				searchBox.sendKeys("AAPL");
 				WebElement searchButton = GoogleHome.searchBtn(driver);
 				searchButton.click();
+				Thread.sleep(4000);
 				
-				Thread.sleep(2000);
 				boolean NASDAQKeyword = driver.getPageSource().contains("NASDAQ: AAPL");
 				Assert.assertEquals(true, NASDAQKeyword);
 				
 				if (this.CaptureScreenShot)
-					logger.captureScreenShot(driver);
+					logger.captureScreenShot(driver); 
 				logger.createTestStepWithImage(
 						this.Description,
 						this.ExpectedValue,
