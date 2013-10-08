@@ -74,6 +74,7 @@ public class GoogleActions extends BaseActions {
 				
 				WebElement searchBox = GoogleHome.searchTxtBox(driver);
 				searchBox.clear(); 
+				Thread.sleep(1000);
 				searchBox.sendKeys("AAPL");
 				WebElement searchButton = GoogleHome.searchBtn(driver);
 				searchButton.click();
