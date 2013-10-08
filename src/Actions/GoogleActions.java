@@ -73,7 +73,7 @@ public class GoogleActions extends BaseActions {
 				JustLogger.logInfo("Step  " + StepNo + " started!");
 				
 				WebElement searchBox = GoogleHome.searchTxtBox(driver);
-				searchBox.clear();
+				searchBox.clear(); 
 				searchBox.sendKeys("AAPL");
 				WebElement searchButton = GoogleHome.searchBtn(driver);
 				searchButton.click();
