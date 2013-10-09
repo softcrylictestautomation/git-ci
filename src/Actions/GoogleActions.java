@@ -79,10 +79,9 @@ public class GoogleActions extends BaseActions {
 				WebElement searchButton = GoogleHome.searchBtn(driver);
 				searchButton.click();
 				Thread.sleep(4000);
-				
-				boolean NASDAQKeyword = driver.getPageSource().contains("NASDAQ: AAPL");
-				Assert.assertEquals(true, NASDAQKeyword);
-				
+				boolean title = driver.getPageSource().contains("NASDAQ:AAPL");
+				Assert.assertEquals(true, title);
+
 				if (this.CaptureScreenShot)
 					logger.captureScreenShot(driver); 
 				logger.createTestStepWithImage(
@@ -143,7 +142,7 @@ public class GoogleActions extends BaseActions {
 			this.ActualFail = "Results page for Apple Inc company is not displayed";
 			try {
 				JustLogger.logInfo("Step  " + StepNo + " started!");
-				
+				//Clicking on more results button
 				GoogleHome.moreResultsBtn(driver).click();
 				Thread.sleep(2000);
 				GoogleHome.searchTab(driver).isDisplayed();
