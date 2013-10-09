@@ -65,7 +65,7 @@ public class GoogleActions extends BaseActions {
 			
 		
 			StepNo = 2;
-			this.Description = "Search in for the keyword 'AAPL'";
+			this.Description = "Search for the keyword 'AAPL'";
 			this.ExpectedValue = "Apple Inc's financial card should be displayed";
 			this.ActualPass = "Apple Inc's financial card is displayed";
 			this.ActualFail = "Apple Inc's financial card is not displayed";
