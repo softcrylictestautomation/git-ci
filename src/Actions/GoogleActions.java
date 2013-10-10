@@ -75,11 +75,11 @@ public class GoogleActions extends BaseActions {
 				WebElement searchBox = GoogleHome.searchTxtBox(driver);
 				searchBox.clear(); 
 				Thread.sleep(1000);
-				searchBox.sendKeys("AAPL");
+				searchBox.sendKeys("GOOG");
 				WebElement searchButton = GoogleHome.searchBtn(driver);
 				searchButton.click();
 				Thread.sleep(2000);
-				boolean title = driver.getPageSource().contains("NASDAQ:AAPL");
+				boolean title = driver.getPageSource().contains("NASDAQ:GOOG");
 				Assert.assertEquals(true, title);
 
 				if (this.CaptureScreenShot)
