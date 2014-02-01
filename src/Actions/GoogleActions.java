@@ -110,7 +110,7 @@ public class GoogleActions extends BaseActions {
 			this.ActualFail = "Google Finance Chart is not loaded";
 			try {
 				JustLogger.logInfo("Step  " + StepNo + " started!");
-				//Clicking on Google Finance Link
+				//Clicking on Google Finance Link 
 				GoogleHome.googleFinanceLink(driver).click();
 				Thread.sleep(4000);
 				boolean financeChart = driver.getPageSource().contains("NASDAQ real-time data");
