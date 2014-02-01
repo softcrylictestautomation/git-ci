@@ -112,7 +112,7 @@ public class GoogleActions extends BaseActions {
 				JustLogger.logInfo("Step  " + StepNo + " started!");
 				//Clicking on Google Finance Link
 				GoogleHome.googleFinanceLink(driver).click();
-				Thread.sleep(2000);
+				Thread.sleep(4000);
 				boolean financeChart = driver.getPageSource().contains("NASDAQ real-time data");
 				Assert.assertEquals(financeChart, true);
 				if (this.CaptureScreenShot)
