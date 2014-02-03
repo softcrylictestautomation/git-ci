@@ -26,8 +26,8 @@ public class GoogleActions extends BaseActions {
 	public WebDriver Google_Test(Hashtable<String, String> data) throws Exception {
 		try {
 			int StepNo = 1;
-			this.Description = "Navigate to Google Home page";
-			this.ExpectedValue = "Google home page should be displayed";
+			this.Description = "Navigate to Google's Home page";
+			this.ExpectedValue = "Google's home page should be displayed";
 			this.ActualPass = "Google home page is displayed";
 			this.ActualFail = "Google home page is not displayed";
 			try {
