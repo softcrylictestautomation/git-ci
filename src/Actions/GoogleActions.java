@@ -65,10 +65,10 @@ public class GoogleActions extends BaseActions {
 			
 		
 			StepNo = 2;
-			this.Description = "Search for the keyword 'AAPL' in the text box";
-			this.ExpectedValue = "Apple Inc's financial card should be displayed";
-			this.ActualPass = "Apple Inc's financial card is displayed";
-			this.ActualFail = "Apple Inc's financial card is not displayed";
+			this.Description = "Search for the keyword 'GOOG' in the text box";
+			this.ExpectedValue = "Google's financial card should be displayed";
+			this.ActualPass = "Google's financial card is displayed";
+			this.ActualFail = "Google's financial card is not displayed";
 			try {
 				JustLogger.logInfo("Step  " + StepNo + " started!");
 				
@@ -137,9 +137,9 @@ public class GoogleActions extends BaseActions {
 			}
 			StepNo = 4;
 			this.Description = "Click on more results";
-			this.ExpectedValue = "Results page for Apple Inc company should be displayed";
-			this.ActualPass = "Results page for Apple Inc company is displayed";
-			this.ActualFail = "Results page for Apple Inc company is not displayed";
+			this.ExpectedValue = "Results page for Google company should be displayed";
+			this.ActualPass = "Results page for Google company is displayed";
+			this.ActualFail = "Results page for Google company is not displayed";
 			try {
 				JustLogger.logInfo("Step  " + StepNo + " started!");
 				//Clicking on more results button
