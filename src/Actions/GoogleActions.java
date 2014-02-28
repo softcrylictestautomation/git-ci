@@ -75,13 +75,13 @@ public class GoogleActions extends BaseActions {
 				WebElement searchBox = GoogleHome.searchTxtBox(driver);
 				searchBox.clear(); 
 				Thread.sleep(1000);
-				searchBox.sendKeys("AAPL");
-				//searchBox.sendKeys("GOOG");
+				//searchBox.sendKeys("AAPL");
+				searchBox.sendKeys("GOOG");
 				WebElement searchButton = GoogleHome.searchBtn(driver);
 				searchButton.click();
 				Thread.sleep(2000);
+				//boolean title = driver.getPageSource().contains("NASDAQ:AAPL");
 				boolean title = driver.getPageSource().contains("NASDAQ:GOOG");
-				//boolean title = driver.getPageSource().contains("NASDAQ:GOOG");
 				Assert.assertEquals(true, title);
 
 				if (this.CaptureScreenShot)
@@ -139,9 +139,9 @@ public class GoogleActions extends BaseActions {
 			}
 			StepNo = 4;
 			this.Description = "Click on more results";
-			this.ExpectedValue = "Results page for Google company should be displayed";
-			this.ActualPass = "Results page for Google company is displayed";
-			this.ActualFail = "Results page for Google company is not displayed";
+			this.ExpectedValue = "Results page for searched company should be displayed";
+			this.ActualPass = "Results page for searched company is displayed";
+			this.ActualFail = "Results page for searched company is not displayed";
 			try {
 				JustLogger.logInfo("Step  " + StepNo + " started!");
 				//Clicking on more results button
