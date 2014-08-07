@@ -65,10 +65,10 @@ public class GoogleActions extends BaseActions {
 			
 		
 			StepNo = 2;
-			this.Description = "Search for the keyword 'GOOG' in the text box";
-			this.ExpectedValue = "Google's financial card should be displayed";
-			this.ActualPass = "Google's financial card is displayed";
-			this.ActualFail = "Google's financial card is not displayed";
+			this.Description = "Search for the keyword 'MSFT' in the text box";
+			this.ExpectedValue = "Microsoft's financial card should be displayed";
+			this.ActualPass = "Microsoft's financial card is displayed";
+			this.ActualFail = "Microsoft's financial card is not displayed";
 			try {
 				JustLogger.logInfo("Step  " + StepNo + " started!");
 				
@@ -76,12 +76,14 @@ public class GoogleActions extends BaseActions {
 				searchBox.clear(); 
 				Thread.sleep(1000);
 				//searchBox.sendKeys("AAPL");
-				searchBox.sendKeys("GOOG");
+				//searchBox.sendKeys("GOOG");
+				searchBox.sendKeys("MSFT");
 				WebElement searchButton = GoogleHome.searchBtn(driver);
 				searchButton.click();
 				Thread.sleep(2000);
 				//boolean title = driver.getPageSource().contains("NASDAQ:AAPL");
-				boolean title = driver.getPageSource().contains("NASDAQ:GOOG");
+				//boolean title = driver.getPageSource().contains("NASDAQ:GOOG");
+				boolean title = driver.getPageSource().contains("NASDAQ:MSFT");
 				Assert.assertEquals(true, title);
 
 				if (this.CaptureScreenShot)
