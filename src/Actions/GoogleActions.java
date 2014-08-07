@@ -65,6 +65,7 @@ public class GoogleActions extends BaseActions {
 			
 		
 			StepNo = 2;
+			// Poll reference change
 			this.Description = "Search for the keyword 'MSFT' in the text box";
 			this.ExpectedValue = "Microsoft's financial card should be displayed";
 			this.ActualPass = "Microsoft's financial card is displayed";
