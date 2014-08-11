@@ -66,24 +66,24 @@ public class GoogleActions extends BaseActions {
 		
 			StepNo = 2;
 			// Poll reference change
-			this.Description = "Search for the keyword 'AAPL' in the text box";
-			this.ExpectedValue = "Apple's financial card should be displayed";
-			this.ActualPass = "Apple's financial card is displayed";
-			this.ActualFail = "Apple's financial card is not displayed";
+			this.Description = "Search for the keyword in the text box";
+			this.ExpectedValue = "Financial card for the searched keyword should be displayed";
+			this.ActualPass = "Financial card for the searched keyword is displayed";
+			this.ActualFail = "Financial card for the searched keyword is not displayed";
 			try {
 				JustLogger.logInfo("Step  " + StepNo + " started!");
 				
 				WebElement searchBox = GoogleHome.searchTxtBox(driver);
 				searchBox.clear(); 
 				Thread.sleep(1000);
-				searchBox.sendKeys("AAPL");
-				//searchBox.sendKeys("GOOG");
+				//searchBox.sendKeys("AAPL");
+				searchBox.sendKeys("GOOG");
 				//searchBox.sendKeys("MSFT");
 				WebElement searchButton = GoogleHome.searchBtn(driver);
 				searchButton.click();
 				Thread.sleep(2000);
-				boolean title = driver.getPageSource().contains("NASDAQ:AAPL");
-				//boolean title = driver.getPageSource().contains("NASDAQ:GOOG");
+				//boolean title = driver.getPageSource().contains("NASDAQ:AAPL");
+				boolean title = driver.getPageSource().contains("NASDAQ:GOOG");
 				//boolean title = driver.getPageSource().contains("NASDAQ:MSFT");
 				Assert.assertEquals(true, title);
 
