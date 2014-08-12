@@ -66,7 +66,7 @@ public class GoogleActions extends BaseActions {
 		
 			StepNo = 2;
 			// Poll reference change
-			this.Description = "Search for the keyword in the text box";
+			this.Description = "Search for the keyword in the text box for financial card";
 			this.ExpectedValue = "Financial card for the searched keyword should be displayed";
 			this.ActualPass = "Financial card for the searched keyword is displayed";
 			this.ActualFail = "Financial card for the searched keyword is not displayed";
